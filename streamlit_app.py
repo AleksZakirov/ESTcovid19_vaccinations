@@ -8,7 +8,6 @@ import plotly.graph_objects as go
 
 st.title('Vaktsineerimine Eestis')
 
-@st.cache
 def load_country_data():
     country_data_raw = pd.read_csv('https://opendata.digilugu.ee/covid19/vaccination/v2/opendata_covid19_vaccination_total.csv')
     country_data_raw = country_data_raw[['StatisticsDate', 'MeasurementType', 'DailyCount', 'TotalCount', 'PopulationCoverage']]
